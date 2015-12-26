@@ -11,10 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151226165249) do
+ActiveRecord::Schema.define(version: 20151226174250) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "libations", force: :cascade do |t|
+    t.string   "libation_name"
+    t.decimal  "measurement",       precision: 8, scale: 2
+    t.decimal  "container_type"
+    t.integer  "measurement_units"
+    t.string   "country_made"
+    t.string   "company_name"
+    t.integer  "libation_type"
+    t.string   "website"
+    t.datetime "created_at",                                null: false
+    t.datetime "updated_at",                                null: false
+  end
+
+  add_index "libations", ["libation_name"], name: "index_libations_on_libation_name", using: :btree
+  add_index "libations", ["measurement"], name: "index_libations_on_measurement", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
