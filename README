@@ -4,3 +4,13 @@ Rails 4.2.4
 ruby 2.2.3p173
 PostgreSQL 9.3.10
 Ubuntu 14.04.3 LTS
+
+Dec 27, 2015
+- added detail mvc
+- added association: user -> details <- libation
+- tweaked view files
+
+Dec 26, 2015
+- added libation scaffolding
+- tweaked view files
+- ran composer, devise module.
