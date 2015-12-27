@@ -1,0 +1,30 @@
+p#notice = notice
+
+p
+  strong Libation name:
+  = @libation.libation_name
+p
+  strong Measurement:
+  = @libation.measurement
+p
+  strong Container type:
+  = @libation.container_type
+p
+  strong Measurement units:
+  = @libation.measurement_units
+p
+  strong Country made:
+  = @libation.country_made
+p
+  strong Company name:
+  = @libation.company_name
+p
+  strong Libation type:
+  = @libation.libation_type
+p
+  strong Website:
+  = @libation.website
+
+= link_to 'Edit', edit_libation_path(@libation)
+'|
+= link_to 'Back', libations_path

@@ -1,0 +1,35 @@
+h1 Listing libations
+
+table
+  thead
+    tr
+      th Libation name
+      th Measurement
+      th Container type
+      th Measurement units
+      th Country made
+      th Company name
+      th Libation type
+      th Website
+      th
+      th
+      th
+
+  tbody
+    - @libations.each do |libation|
+      tr
+        td = libation.libation_name
+        td = libation.measurement
+        td = libation.container_type
+        td = libation.measurement_units
+        td = libation.country_made
+        td = libation.company_name
+        td = libation.libation_type
+        td = libation.website
+        td = link_to 'Show', libation
+        td = link_to 'Edit', edit_libation_path(libation)
+        td = link_to 'Destroy', libation, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Libation', new_libation_path
