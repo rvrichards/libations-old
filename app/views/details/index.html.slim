@@ -1,0 +1,55 @@
+h1 Listing details
+
+table
+  thead
+    tr
+      th Libation
+      th Date drank
+      th Store purchased
+      th City purchased
+      th Prov purchased
+      th Country purchased
+      th Colour
+      th Pulp
+      th Can art
+      th Can look
+      th Sweet
+      th Juice
+      th Sip giz
+      th Flavour
+      th Buy again
+      th Carbonated
+      th Filename
+      th Comments
+      th
+      th
+      th
+
+  tbody
+    - @details.each do |detail|
+      tr
+        td = detail.libation
+        td = detail.date_drank
+        td = detail.store_purchased
+        td = detail.city_purchased
+        td = detail.prov_purchased
+        td = detail.country_purchased
+        td = detail.colour
+        td = detail.pulp
+        td = detail.can_art
+        td = detail.can_look
+        td = detail.sweet
+        td = detail.juice
+        td = detail.sip_giz
+        td = detail.flavour
+        td = detail.buy_again
+        td = detail.carbonated
+        td = detail.filename
+        td = detail.comments
+        td = link_to 'Show', detail
+        td = link_to 'Edit', edit_detail_path(detail)
+        td = link_to 'Destroy', detail, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Detail', new_detail_path

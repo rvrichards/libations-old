@@ -11,10 +11,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151226174250) do
+ActiveRecord::Schema.define(version: 20151227133533) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "details", force: :cascade do |t|
+    t.integer  "libation_id"
+    t.date     "date_drank"
+    t.string   "store_purchased"
+    t.string   "city_purchased"
+    t.string   "prov_purchased"
+    t.string   "country_purchased"
+    t.string   "colour"
+    t.integer  "pulp"
+    t.integer  "can_art"
+    t.integer  "can_look"
+    t.integer  "sweet"
+    t.integer  "juice"
+    t.integer  "sip_giz"
+    t.integer  "flavour"
+    t.integer  "buy_again"
+    t.boolean  "carbonated"
+    t.string   "filename"
+    t.text     "comments"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+  add_index "details", ["libation_id"], name: "index_details_on_libation_id", using: :btree
 
   create_table "libations", force: :cascade do |t|
     t.string   "libation_name"
@@ -53,4 +78,5 @@ ActiveRecord::Schema.define(version: 20151226174250) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "details", "libations"
 end

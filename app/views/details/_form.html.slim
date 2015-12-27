@@ -1,0 +1,63 @@
+= form_for @detail do |f|
+  - if @detail.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@detail.errors.count, "error")} prohibited this detail from being saved:"
+      ul
+        - @detail.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :libation_id
+    = f.text_field :libation_id
+  .field
+    = f.label :date_drank
+    = f.date_select :date_drank
+  .field
+    = f.label :store_purchased
+    = f.text_field :store_purchased
+  .field
+    = f.label :city_purchased
+    = f.text_field :city_purchased
+  .field
+    = f.label :prov_purchased
+    = f.text_field :prov_purchased
+  .field
+    = f.label :country_purchased
+    = f.text_field :country_purchased
+  .field
+    = f.label :colour
+    = f.text_field :colour
+  .field
+    = f.label :pulp
+    = f.number_field :pulp
+  .field
+    = f.label :can_art
+    = f.number_field :can_art
+  .field
+    = f.label :can_look
+    = f.number_field :can_look
+  .field
+    = f.label :sweet
+    = f.number_field :sweet
+  .field
+    = f.label :juice
+    = f.number_field :juice
+  .field
+    = f.label :sip_giz
+    = f.number_field :sip_giz
+  .field
+    = f.label :flavour
+    = f.number_field :flavour
+  .field
+    = f.label :buy_again
+    = f.number_field :buy_again
+  .field
+    = f.label :carbonated
+    = f.check_box :carbonated
+  .field
+    = f.label :filename
+    = f.text_field :filename
+  .field
+    = f.label :comments
+    = f.text_area :comments
+  .actions = f.submit

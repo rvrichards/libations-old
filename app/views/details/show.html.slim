@@ -1,0 +1,60 @@
+p#notice = notice
+
+p
+  strong Libation:
+  = @detail.libation
+p
+  strong Date drank:
+  = @detail.date_drank
+p
+  strong Store purchased:
+  = @detail.store_purchased
+p
+  strong City purchased:
+  = @detail.city_purchased
+p
+  strong Prov purchased:
+  = @detail.prov_purchased
+p
+  strong Country purchased:
+  = @detail.country_purchased
+p
+  strong Colour:
+  = @detail.colour
+p
+  strong Pulp:
+  = @detail.pulp
+p
+  strong Can art:
+  = @detail.can_art
+p
+  strong Can look:
+  = @detail.can_look
+p
+  strong Sweet:
+  = @detail.sweet
+p
+  strong Juice:
+  = @detail.juice
+p
+  strong Sip giz:
+  = @detail.sip_giz
+p
+  strong Flavour:
+  = @detail.flavour
+p
+  strong Buy again:
+  = @detail.buy_again
+p
+  strong Carbonated:
+  = @detail.carbonated
+p
+  strong Filename:
+  = @detail.filename
+p
+  strong Comments:
+  = @detail.comments
+
+= link_to 'Edit', edit_detail_path(@detail)
+'|
+= link_to 'Back', details_path
