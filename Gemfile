@@ -9,6 +9,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'activeadmin', github: 'activeadmin'
 gem 'active_skin'
+gem "paperclip", "~> 4.3"
 
 group :development, :test do
   gem 'byebug'

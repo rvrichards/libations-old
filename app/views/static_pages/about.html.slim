@@ -1,0 +1,36 @@
+h1 About The Libation Database
+h3 Libation History
+
+p The year 2006 found me working in Hawaii. On the way to work was a large Japanese based store: Daiai. I believe that it has been sold and is now Don Quixote, go figure. Anyways, I liked the wide range of exotic foods and products for sale & visited often. One day as I walked down the drink aisle I came noticed some interesting beverages that I had never imagined before. I bought a few, one in particular was made of Aloe Vera! I liked them so much that I went back the next day and bought about $50 of different juices. Some cans had sparse english, others from all over Asia and others with great designs like a soda can that seemed to be brushed aluminum. I was hooked.
+
+h3 The Word Libation
+
+p The word Libation has a nice ring to it. At first I called it my Juice database. After a while I was trying other drinks that were not really juices, so I started calling it Beverages. I had that for a while but then decided that a better word was available. An old friend wanted to open up a joint called Libations & Comestibles, great almost forgotten words. I always liked that Libation word so I ended up choosing that, and thats my story and I'm sticking to it.
+
+h3 Starting Out
+
+p At first I just kept track on paper. At first this was okay, but after a while I decided to take some pictures because they were interesting and soon I had quite a number. To keep track of them all, I created a spreadsheet, after all I am a tech nerd. It kept growing and I added more data fields (strictly research) and it just kind of kept growing. It evolved to a point that I decided it was time to place the results in a db and of course that would also require a set of screens to access them.
+
+p I started first to go for a PHP app because I was using the LAMP stack. Made some progress, but kept it as a local copy only and I was thinking of putting it online. I migrated to wanting to do it using Java. The PHP project was dropped as I started the Java coded project. After a while the Java project tapered off as interest waned, but I dumped the db I created and the photos kept piling up.
+
+h3 Now its 2016
+
+p Ten years later and its time to finally do this app, and I will be using Ruby/Rails. It'll be posted on Github, so the work will be in the open. Not sure all the details, but I have started and looking forward to seeing this thing working. Besides, I was still taking photos of the libations and now have quite a backlog.
+
+h3 Technical notes
+
+b User table
+p Decided to have users, so others could add to the db. Wether I fully implement this or not is moot, I want to have this separation there in case I do.
+
+b Libation table
+p This table has the root info for each libation, my goal was to only list things that would not change.
+
+b Detail table
+p The idea for this table are the things that can vary. This is mostly the review of the libation, like its sweetness, with is subjective to each person/user.
+
+p Decided that I would create a one-many relationship between the main <b>libation</b> entry and the <b>detail</b> entry. This way, if I wanted I could have others also add their detail information to a specific libation.
+
+b Ratings
+p There are many columns in the <b>detail</b> table to allow a rating of the libation. I chose as a scale for many ratings 0-5, because I think (for myself) that I can reasonably rate drinks with that accuracy, where as ten different levels, I feel I would be guessing more then I am now!
+
+p 1 Jan 2016
