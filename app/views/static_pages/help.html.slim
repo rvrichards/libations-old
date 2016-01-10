@@ -1,2 +1,91 @@
-h1 StaticPages#help
-p Find me in app/views/static_pages/help.html.slim
+h1 Technical Information
+
+p A libation record is comprised of two parts, a libation and a detail.
+ol
+  li The libation record that records the base (static) information of the libation.
+  ul
+    li This includes can weight, container type and product information etc.
+  li The detail record that records the subjective information, based on the person sampling the libation.
+  ul
+    li This includes what the reviewer though of the taste, clolour, sweetness, etc.
+
+p There is some information that is selected from a dropdown box, here they are:
+h3 Libation Type
+p This refers to the libation type, also specifying the db code used. Currently the options are:
+ul
+  li drink  1
+  li juice 2
+  li soda 3
+  li tea 4
+  li dairy 5
+  li wine 6
+  li beer 7
+  li other 99
+
+h3 Container Type
+p This refers to the material used to create the container. Currently the options are:
+ul
+  li Aluminium 1
+  li Glass 2
+  li Plastic 3
+  li Steel 4
+  li Tetra 5
+  li Cardboard 6
+  li Other 7
+
+h3 Measurement Type
+p This refers to weight measurement type. Currently the options are:
+ul
+  li g - grams 1
+  li l - litre 2
+  li ml - millilitre 3
+  li oz - ounces 4
+
+h3 Ratings
+p There are numerous ratings, like flavour, sweetness, can_art, etc. They are based and enforced to be a 0-5 scale.
+ul
+  li 0 being the least flavourful, least sweet, ugliest can art.
+  li 2-3 being about neutral or average
+  li 5 being the most flavourful, most sweet, prettiest can art.
+
+h3 Images
+p This is to be determined, but will specify a recommended range of picture quality requested. Also, it will be recommended that there will be pictures covering the front and all sides of the libation, plus anything extra or interesting that needs a second look. Such things as a unique lid, where the opening changes the look of the container.
+
+h3 List of criteria
+p There are many pieces of information that will be covered, and some need a little further explanation.
+
+h5 Libation Record
+p This information is mostly static, is listed on the container.
+ul
+  li Libation name - The name that is on the container.
+  li Libation type - This is the type of libation, select from predetermined list.
+  li Container type - This is the type of container, select from predetermined list.
+  li Measurement - This is the weight, numbers only on the container,
+  li Measurement type - This is the weight type (gm, oz, etc), select from predetermined list.
+  li Country made - The container will often have the country where made.
+  li Company name - The container will often have the company name.
+  li Website - The container will often list a website.
+
+h5 Detail Record
+p The detail record contains the information that the reviewer will fill out, mostly after they have had the libation. There are ratings required (mentioned above) that are subjective.
+ul
+  li Date drank - When the libation was consumed.
+  li Store_purchased - The store where the libation was purchased.
+  li City purchased - The city where the libation was purchased.
+  li Prov purchased - The province/state where the libation was purchased.
+  li Country purchased - The country where the libation was purchased.
+  li Colour - The colour of the libation.
+  li pulp - Rating from 0-5 of how much pulp there was.
+  li Can art - Rating from 0-5 of the art design on the can. 0=Boring 5=Excellent.
+  li Can look - Rating from 0-5 of the look of the cans physical appearance. 0=Boring 5=Excellent.
+  li Sweet - Rating from 0-5 of how sweet it was, 0=tart 5=Super sweet.
+  li Juice - Percentage of juice in the libation. Listed on package.
+  li Sip-giz - Rating from 0-5 of 0=Sip only to 5=Guzzle the thing.
+  li Flavour - Rating from 0-5 of the flavour.
+  li Buy again - Yes, no, or maybe.
+  li Carbonated - Yes or no.
+  li Filename - This will be an image of the libation. Want multiple sides.
+  li Comments - Can be quite creative here, have fun.
+
+
+Last updated, January 10, 2016
