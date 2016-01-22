@@ -14,10 +14,10 @@
     = f.text_field :measurement
   .field
     = f.label :container_type
-    = f.text_field :container_type
+    = f.select :container_type, Libation.container_types.keys
   .field
     = f.label :measurement_type
-    = f.text_field :measurement_type
+    = f.select :measurement_type, Libation.measurement_types.keys
   .field
     = f.label :country_made
     = f.text_field :country_made
@@ -26,7 +26,7 @@
     = f.text_field :company_name
   .field
     = f.label :libation_type
-    = f.text_field :libation_type
+    = f.select :libation_type, Libation.libation_types.keys
   .field
     = f.label :website
     = f.text_field :website
